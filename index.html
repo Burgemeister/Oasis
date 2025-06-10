@@ -3,194 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UNTITLED 1998 SURREALIST DRAMA</title>
+  <title>PROJECT: UNTITLED 1998 SURREALIST DRAMA</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 
     body {
-      /* --- HIER IS DE WIJZIGING --- */
-      background-color: #1a1a1a;
-      /* Een subtiele gradient voor een rustige, gefocuste sfeer */
-      background-image: radial-gradient(ellipse at center, #292929 0%, #1a1a1a 100%);
+      background-color: #f5f1e9; /* Een verweerde, gebroken witte papierkleur */
       font-family: 'Special Elite', 'Courier New', Courier, monospace;
-      color: #e0e0e0;
-      margin: 0;
+      color: #2b2b2b;
+      margin: 0 auto;
+      max-width: 800px;
       padding: 40px;
-      min-height: 100vh;
-      box-sizing: border-box;
     }
     .container {
-        border: 1px solid #444;
-        padding: 40px;
-        background-color: rgba(20, 20, 20, 0.85);
-        box-shadow: 0 0 25px rgba(0,0,0,0.5);
-        backdrop-filter: blur(5px);
+        border: 1px solid #ddd;
+        padding: 30px 40px;
+        background: #fff;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
     }
     h1, h2 {
-      font-family: 'UnifrakturCook', cursive;
-      color: #D1A54A;
-      font-weight: 700;
+      font-weight: normal;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin: 0;
-      text-shadow: 1px 1px #000;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
     }
 
     h1 {
-        font-size: 2.2rem;
+      font-size: 1.5rem;
+      margin-top: 0;
     }
 
     h2 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
+      font-size: 1.3rem;
     }
-    
+
     .glitch {
-      animation: flicker 3s infinite alternate;
-      text-shadow: 1px 0px #D1A54A, -1px 0px #8A6D99, 2px 2px #000;
+      position: relative;
+      animation: flicker 2.5s infinite alternate;
+      text-shadow: 1px 0px #e74c3c, -1px 0px #3498db, 0 0 5px rgba(0,0,0,0.2);
     }
+
     @keyframes flicker {
       0%, 18%, 22%, 25%, 53%, 57%, 100% {
         opacity: 1;
-        text-shadow: 1px 0 #D1A54A, -1px 0 #8A6D99, 2px 2px #000;
+        text-shadow: 1px 0 #FF00FF, -1px 0 #00FFFF;
       }
       20%, 24%, 55% {
         opacity: 0.8;
-        text-shadow: 1px 0 #D1A54A, -1px 0 #333, 2px 2px #000;
+        text-shadow: none;
       }
     }
-    
+
     .image-container {
-      width: 280px;
+      width: 250px;
       float: right;
       margin-left: 30px;
       margin-bottom: 20px;
-      background: #fdfdfd;
-      padding: 15px 15px 70px 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      transform: rotate(3deg);
-      position: relative;
-      transition: transform 0.3s ease;
-    }
-    .image-container:before {
-        content: '';
-        position: absolute;
-        top: -20px;
-        left: 50%;
-        width: 100px;
-        height: 30px;
-        background-color: rgba(255, 255, 160, 0.4);
-        transform: translateX(-50%) rotate(-4deg);
-        border: 1px solid rgba(0,0,0,0.1);
+      background: #fff;
+      padding: 15px;
+      padding-bottom: 50px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transform: rotate(2deg);
+      transition: all 0.3s ease-in-out;
     }
 
     .image-container:hover {
-        transform: rotate(0deg) scale(1.08);
-        z-index: 20;
+        transform: rotate(0deg) scale(1.05);
+        z-index: 10;
     }
+
     .image-container img {
       display: block;
       width: 100%;
       height: auto;
       border: 1px solid #eee;
     }
+
     .image-container p {
       position: absolute;
-      bottom: 15px;
+      bottom: 10px;
       left: 0;
       right: 0;
       margin: 0;
-      font-size: 1rem;
+      font-size: 0.9rem;
       text-align: center;
-      font-style: italic;
-      color: #333;
     }
+
     section {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       padding-bottom: 20px;
-      border-bottom: 1px dashed #444;
+      border-bottom: 1px dashed #ccc;
     }
     section:last-child {
         border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    p, ul {
+      line-height: 1.7;
+      font-size: 1rem;
+      text-align: justify;
+    }
+    ul {
+      list-style-type: '» ';
+      margin: 10px 0 0 20px;
+      padding-left: 15px;
+    }
+    strong {
+        font-weight: normal;
+        background-color: rgba(255, 255, 0, 0.4); /* Sterker markeereffect */
+        padding: 2px 3px;
+    }
+
+    .logline {
+        font-style: italic;
+        border-left: 3px solid #ccc;
+        padding-left: 15px;
+        margin: 20px 0;
     }
     
-    .story-section::after {
+    .clearfix::after {
         content: "";
         clear: both;
         display: table;
     }
-    
-    p, ul {
-      line-height: 1.8;
-      font-size: 1.1rem;
-    }
-    ul {
-      list-style-type: '† ';
-      margin: 10px 0 0 20px;
-      padding-left: 10px;
-    }
-    strong {
-        font-weight: normal;
-        color: #ffc107;
-        text-shadow: 1px 1px 0 #000;
-    }
 
-    .logline {
-      font-size: 1.2rem;
-      font-style: italic;
-      border-left: 4px solid #D1A54A;
-      padding-left: 20px;
-      margin: 25px 0;
-      background-color: rgba(0,0,0,0.2);
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-
+    /* Stijlen voor mobiele apparaten */
     @media (max-width: 768px) {
         .image-container {
             float: none;
-            transform: rotate(0deg);
-            margin: 30px auto;
-            width: 90%;
+            transform: rotate(0);
+            margin: 20px auto;
+            width: 80%;
             max-width: 280px;
         }
         body {
-            padding: 20px;
+            padding: 20px 10px;
         }
         .container {
-            padding: 25px;
+            padding: 20px;
+        }
+        p, ul {
+            text-align: left;
         }
     }
   </style>
 </head>
 <body>
 <div class="container">
-
-  <section>
-    <h1>UNTITLED 1998 SURREALIST DRAMA</h1>
-    <strong>FORMAT:</strong> Adventure Game / Psychological Drama<br>
+  <section class="clearfix">
+    <h1>PROJECT: UNTITLED 1998 SURREALIST DRAMA</h1>
+    <strong>FORMAT:</strong> Adventure Game / Psychological Drama
     <p class="logline">In 1998, a lonely teen’s comforting dreams about her long-lost father turn into surreal nightmares, forcing her to confront her trauma as the fragile line between her dream world and reality dissolves completely.</p>
   </section>
-  
-  <section class="story-section">
-    <div class="image-container">
-      <img src="https://github.com/Burgemeister/SwingDash/blob/main/8e007e86-08ac-43b0-8994-521de4432953.jpg?raw=true" alt="Oasis Thorne houdt een kaars vast">
-      <p>Oasis, ’98</p>
+
+  <section class="clearfix">
+     <div class="image-container">
+      <img src="https://github.com/Burgemeister/SwingDash/blob/main/8e007e86-08ac-43b0-8994-521de4432953.jpg?raw=true" alt="Oasis Thorne houdt een kaars vast in een donkere kamer.">
+      <p>Oasis Thorne, '98</p>
     </div>
 
     <h2 class="glitch">THE STORY</h2>
-    <p>Oasis Thorne is an outcast. Haunted by the ghost of a father who vanished without a word, she lives in a self-imposed exile of incense, myths, and the endless repeat of <strong>Bôa’s "Duvet."</strong> Her only solace is a vibrant dream world where she can finally speak to her dad, feel seen by her classmates, and be the person she can't be in reality.</p>
-    <p>But the comfort is fleeting. The dreams begin to rot. Familiar faces twist into masks of terror, comforting memories become dangerous traps, and the nightmares start to bleed into her waking hours. As the surreal horrors of her subconscious manifest in the real world, Oasis loses her grip. She must navigate a terrifying landscape of dream logic and repressed memory to uncover the truth of why her father left and, more importantly, to learn that her own worth isn't something to be found in a dream, but something to be built in reality.</p>
+    <p>This is Oasis Thorne. Born on August 13, 1980, she lives with her mom. With pale skin, silver hair, and elf-like features, she's an outcast. Her room is her safe space—the smell of incense and impressive piles of books lit by candles make her cave a dark academia lover's dream. She mostly likes to read about witches and myths. A new song just came out—<strong>"Duvet" by Bôa</strong>—and it's on endless repeat.</p>
+
+    <p>Her dad hasn't been in the picture since she was six. He just left. Without a word. It left a wound that made her feel like she was never enough. Not enough to stay for. When she started high school, history repeated itself; she didn't fit in. These wounds made her introverted and conflict-avoidant. Most days, she just feels like a nobody.</p>
+
+    <p>Her only solace is a vibrant dream world where her father appears often. In those moments, she finally feels comforted, seen not just by her father, but even by her classmates. But the comfort is fleeting. The dreams begin to rot from the inside out. Familiar faces twist into masks of terror, and the nightmares start to bleed into her waking hours. As the surreal horrors manifest in the real world, Oasis must navigate a terrifying landscape of dream logic to uncover the truth of why her father left and, more importantly, to learn that her own worth isn't something to be found in a dream, but something to be built in reality.</p>
   </section>
 
   <section>
     <h2 class="glitch">THE PROTAGONIST: OASIS THORNE</h2>
     <ul>
       <li><strong>WHO:</strong> An 18-year-old with silver hair and elf-like features. Her bedroom is a candlelit dark academia haven.</li>
-      <li><strong>WANT:</strong> To be seen, to be loved, to be <strong>enough</strong> for someone to stay.</li>
-      <li><strong>NEED:</strong> To stop seeking validation from others and discover her own self-worth.</li>
-      <li><strong>FATAL FLAW:</strong> Escapism & indecisiveness trap her in dreams and prevent real change.</li>
+      <li><strong>WANT:</strong> She longs to be seen and loved—just as she is in her dreams.</li>
+      <li><strong>NEED:</strong> To learn that her worth isn't defined by others, but by herself. She needs to develop self-love and confidence to make her own choices.</li>
+      <li><strong>FATAL FLAW:</strong> Her flaws are <strong>escapism and indecisiveness.</strong> She escapes the real world by disappearing into her dreams, causing her to lose track of time, life, and reality.</li>
     </ul>
   </section>
 
